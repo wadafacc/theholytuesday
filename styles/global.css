@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&family=Roboto+Slab:wght@100;200;300;400&display=swap');
+
+html,
+body,
+#__nuxt,
+#__layout {
+    height: 100% !important;
+    width: 100% !important;
+    background-color: #082032;
+    color: white;
+    font-family: 'Roboto Slab', serif;
+}
+
+* {
+    margin: 0;
+    width: 0;
+}
+
+.main {
+    width: 70%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.head {
+    width: 100%;
+    margin: 0.5rem 0;
+}
+
+@media (max-width: 570px) {
+    .main {
+        width: 80%;
+    }
+}
+
+.menu-container {
+    position: relative;
+    width: 100%;
+    height: 10rem;
+    background-color: #2C394B;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin: 1rem;
+    transition: 0.25s;
+}
+
+.menu-container:hover {
+    box-shadow: #334756 0.5rem 0.5rem;
+    transform: translate(-0.5rem, -0.5rem);
+}
+
+.highlight {
+    color: #FF4C29;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    width: 100%;
+}
+
+h5 {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 100;
+    font-size: 1.25rem;
+}
+
+.title {
+    margin: 0.25rem 0;
+}
+
+.price {
+    position: absolute;
+    bottom: 0;
+    margin: 1rem 0;
+    color: #FF4C29;
+    font-weight: 300;
+}
