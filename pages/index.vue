@@ -9,8 +9,12 @@
       <h2 class="title">
         {{ day.category }} | <span class="highlight">{{ day.title }}</span>
       </h2>
-      <h3>{{ day.description }}</h3>
-      <h4 class="price">CHF {{ day.price }}</h4>
+      <div class="desc">
+        <h3>{{ day.description }}</h3>
+      </div>
+      <div class="price">
+        <h4>CHF {{ day.price }}</h4>
+      </div>
     </div>
   </div>
 </template>
