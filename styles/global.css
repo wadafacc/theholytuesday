@@ -23,7 +23,6 @@ body,
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-bottom: 1rem;
 }
 
 .head {
@@ -71,6 +70,15 @@ h5 {
     font-size: 1.25rem;
 }
 
+a {
+    color: white;
+    transition: 0.25s;
+}
+
+a:hover {
+    color: #FF4C29;
+}
+
 .title {
     margin: 0.25rem 0;
 }
@@ -92,4 +100,10 @@ h5 {
 .desc {
     width: 100%;
     height: fit-content;
+}
+
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
 }

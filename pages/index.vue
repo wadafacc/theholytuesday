@@ -18,6 +18,17 @@
         </h4>
       </div>
     </div>
+    <div class="footer">
+      <h5>
+        made with ❤ by
+        <a
+          href="https://github.com/wadafacc"
+          target="_blank"
+          rel="noopener noreferrer"
+          >functionizable</a
+        >
+      </h5>
+    </div>
   </div>
 </template>
 
