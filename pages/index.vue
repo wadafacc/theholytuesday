@@ -13,7 +13,9 @@
         <h3>{{ day.description }}</h3>
       </div>
       <div class="price">
-        <h4>CHF {{ day.price }}</h4>
+        <h4>
+          CHF {{ day.price }} / {{ (day.price * 0.75).toFixed(1) + 0 }} (-25%)
+        </h4>
       </div>
     </div>
   </div>
