@@ -45,14 +45,9 @@ export default {
   },
   mounted() {
     this.$axios
-      .get("https://api.fivemoods.ch/menu/")
+      .get("https://api-prod.fivemoods.ch/menu/day/tuesday")
       .then((res) => {
-        res.data.forEach((e) => {
-          if (e.weekday.toLowerCase() === "tuesday") {
-            this.menu.push(e);
-            console.log(e);
-          }
-        });
+        this.menu = res.data;
       })
       .catch((err) => {
         console.log(err);
