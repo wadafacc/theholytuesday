@@ -43,7 +43,7 @@ export default {
       menu: [],
     };
   },
-  mounted() {
+  fetch() {
     this.$axios
       .get("https://api-prod.fivemoods.ch/menu/day/tuesday")
       .then((res) => {
