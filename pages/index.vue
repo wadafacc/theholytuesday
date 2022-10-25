@@ -48,6 +48,7 @@ export default {
       .get("https://api-prod.fivemoods.ch/menu/day/tuesday")
       .then((res) => {
         this.menu = res.data;
+        console.log(this.menu);
       })
       .catch((err) => {
         console.log(err);
