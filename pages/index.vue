@@ -55,7 +55,6 @@ export default {
       .get(`https://api-prod.fivemoods.ch/menu/day/${this.weekdays[currentDay]}`)
       .then((res) => {
         this.menu = res.data;
-        console.log(this.menu);
       })
       .catch((err) => {
         console.log(err);
