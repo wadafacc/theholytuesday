@@ -1,7 +1,7 @@
 <template>
   <div class="main">
     <div class="head">
-      <h1>THE HOLY TUESDAY</h1>
+      <h1>THE HOLY {{ day }}</h1>
       <h5>the only menu you'll ever need.</h5>
       <i><h5>[siemens exclusive, for now]</h5></i>
     </div>
@@ -14,7 +14,7 @@
       </div>
       <div class="price">
         <h4>
-          CHF {{ day.price }} / {{ (day.price * 0.75).toFixed(1) + 0 }} (-25%)
+          CHF {{ day.price }} / {{ (day.price * 0.75).toFixed(2) }} (-25%)
         </h4>
       </div>
     </div>
@@ -24,10 +24,10 @@
         <a
           href="https://github.com/wadafacc"
           target="_blank"
-          rel="noopener noreferrer"
           >functionizable</a
         >
       </h5>
+      <h5><a href="https://docs.fivemoods.ch/" target="_blank">[api]</a></h5>
     </div>
   </div>
 </template>
@@ -41,11 +41,18 @@ export default {
   data() {
     return {
       menu: [],
+      weekdays:["sunday","monday","tuesday","wednesday","thursday","friday","saturday"],
+      day: ""
     };
   },
   mounted() {
+    let time = new Date(Date.now());
+    let currentDay = time.getDay();
+
+    this.day = this.weekdays[currentDay].toUpperCase();
+    
     this.$axios
-      .get("https://api-prod.fivemoods.ch/menu/day/tuesday")
+      .get(`https://api-prod.fivemoods.ch/menu/day/${this.weekdays[currentDay]}`)
       .then((res) => {
         this.menu = res.data;
         console.log(this.menu);
